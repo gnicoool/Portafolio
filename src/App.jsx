@@ -2,6 +2,7 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from './assets/vite.svg';
 import heroImg from './assets/hero.png';
+import { ProyectosSection } from './components/ProyectosSection/ProyectosSection';
 import './App.css';
 
 function App() {
@@ -92,6 +93,8 @@ function App() {
           </ul>
         </div>
       </section>
+
+      <ProyectosSection />
 
       <div className="ticks"></div>
       <section id="spacer"></section>

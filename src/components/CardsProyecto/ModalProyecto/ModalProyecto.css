@@ -1,0 +1,246 @@
+.pm-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: var(--color-backdrop);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: pm-fade-in 0.22s ease forwards;
+}
+
+@keyframes pm-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pm-panel {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  max-height: 88vh;
+  overflow-y: auto;
+  border: 1px solid var(--color-tag-border);
+  border-radius: 22px;
+  background: linear-gradient(160deg, rgba(14, 19, 62, 0.96), rgba(22, 26, 72, 0.98));
+  animation: pm-slide-up 0.28s cubic-bezier(0.22, 0.68, 0, 1.1) forwards;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-section-border) transparent;
+}
+
+.pm-panel::-webkit-scrollbar {
+  width: 4px;
+}
+
+.pm-panel::-webkit-scrollbar-thumb {
+  background: var(--color-tag-border);
+  border-radius: 99px;
+}
+
+@keyframes pm-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.pm-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  color: rgba(232, 235, 251, 0.92);
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.pm-close svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pm-close:hover {
+  background: rgba(37, 36, 36, 0.7);
+  transform: rotate(90deg);
+}
+
+.pm-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  overflow: hidden;
+  border-radius: 22px 22px 0 0;
+}
+
+.pm-image,
+.pm-image-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.pm-image {
+  object-fit: cover;
+}
+
+.pm-image-placeholder {
+  background: linear-gradient(135deg, #1e2460, #2e3888 50%, #3e4aaa);
+}
+
+.pm-image-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.pm-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px 28px 30px;
+}
+
+.pm-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.pm-links {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.pm-title {
+  font: 700 1.65rem/1.2 var(--font-display);
+  color: var(--color-title);
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+.pm-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 6px;
+}
+
+.pm-section {
+  padding-left: 14px;
+  border-left: 2px solid var(--color-section-border);
+}
+
+.pm-section-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0 0 7px;
+  font: inherit;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.pm-section-icon {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.pm-section-text {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--color-modal-text);
+}
+
+@media (max-width: 640px) {
+  .pm-backdrop {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .pm-panel {
+    max-width: none;
+    max-height: 94dvh;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .pm-close {
+    top: 12px;
+    right: 12px;
+  }
+
+  .pm-image-wrapper {
+    aspect-ratio: 16 / 9;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .pm-content {
+    gap: 12px;
+    padding: 18px 16px 28px;
+  }
+
+  .pm-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .pm-links {
+    padding-top: 0;
+  }
+
+  .pm-title {
+    font-size: 1.35rem;
+    padding-right: 36px;
+  }
+
+  .pm-sections {
+    gap: 14px;
+    margin-top: 4px;
+  }
+
+  .pm-section {
+    padding-left: 12px;
+  }
+
+  .pm-section-text {
+    font-size: 0.84rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .pm-backdrop {
+    padding: 16px;
+  }
+
+  .pm-panel {
+    max-width: min(560px, 100%);
+  }
+
+  .pm-content {
+    padding: 20px 22px 26px;
+  }
+}

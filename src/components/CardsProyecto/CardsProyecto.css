@@ -74,7 +74,7 @@
 }
 
 .project-card__title {
-  font: 700 1.2rem/1.25 var(--font-display);
+  font: 600 1.2rem/1.25 var(--font-subtitle);
   color: var(--color-title);
   margin: 0;
   letter-spacing: 0.01em;

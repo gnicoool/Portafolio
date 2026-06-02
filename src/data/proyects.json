@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "titulo": "Cine Web",
+    "tipo": "Fullstack",
+    "imagen": "/assets/projects/cine.png",
+    "linkRepo": "https://github.com/gnicoool/ProyectMoviesWeb-Frontend",
+    "linkDesplegado": "https://gnicoool.github.io/ProyectMoviesWeb-Frontend/",
+    "stackUsado": ["javascript", "html", "css", "python", "fastapi", "postgresql", "docker"],
+    "queResuelve": {
+      "es": "Permite subir y buscar películas agregadas por usuarios, con manejo de ratings.",
+      "en": "Enables real-time movie and billboard search with rating management."
+    },
+    "decisionTecnica": {
+      "es": "Elegí este stack para afianzar las bases del desarrollo web vanilla, separando frontend y backend en repositorios independientes. FastAPI resultó ideal por su rapidez y fácil integración con PostgreSQL.",
+      "en": "I chose vanilla JavaScript and HTML/CSS to strengthen my web fundamentals, keeping frontend and backend in separate repos. FastAPI was the natural backend choice for its speed and seamless PostgreSQL integration."
+    },
+    "aprendizaje":{
+      "es": "Me permitió practicar el desarrollo fullstack, la implementación de lógica de negocio en FastAPI, y el diseño de interfaces con HTML/CSS.",
+      "en": "It allowed me to practice fullstack development, business logic implementation in FastAPI, using SQLAlchemy ORM for data management, and interface design with HTML/CSS."
+    }
+  },
+  {
+    "id": 2,
+    "titulo": "E-commerce Supermercado",
+    "tipo": "Fullstack",
+    "imagen": "/assets/projects/ecommerce.png",
+    "linkRepo": "https://github.com/gnicoool/Proyecto2_BD/tree/proyecto-3",
+    "linkDesplegado": "https://supermercado-web-60of.onrender.com/login",
+    "stackUsado": ["react", "tailwind", "fastapi", "postgresql", "typescript", "html", "css", "docker"],
+    "queResuelve": {
+      "es": "Facilita la gestión integral de empleados, proveedores, productos, ventas y compras en un entorno comercial.",
+      "en": "Streamlines the management of employees, suppliers, products, sales, and purchases in a commercial environment."
+    },
+    "decisionTecnica": {
+      "es": "React y Tailwind para una interfaz atractiva y responsive, FastAPI con SQLAlchemy como ORM para un backend eficiente, y PostgreSQL como base de datos robusta.",
+      "en": "React and Tailwind for a responsive UI, FastAPI with SQLAlchemy ORM for an efficient backend, and PostgreSQL for a robust database."
+    },
+    "aprendizaje":{
+      "es": "Me permitió practicar el desarrollo fullstack, la implementación de lógica de negocio en FastAPI, el uso de ORM para la gestión de datos, y el diseño de interfaces con Tailwind.",
+      "en": "It allowed me to practice fullstack development, state management in React, business logic implementation in FastAPI, and interface design with Tailwind."
+    }
+  },
+  {
+    "id": 3,
+    "titulo": "Museo Web",
+    "tipo": "Frontend",
+    "imagen": "/assets/projects/ecommerce.png",
+    "linkRepo": "https://github.com/gnicoool/museo-React",
+    "linkDesplegado": null,
+    "stackUsado": ["react", "javascript", "html", "css", "docker"],
+    "queResuelve": {
+      "es": "Facilita la búsqueda y exploración de obras de arte del Instituto de Arte de Chicago mediante su API pública.",
+      "en": "Enables easy search and exploration of artworks from the Art Institute of Chicago using its public API."
+    },
+    "decisionTecnica": {
+      "es": "React y CSS para una interfaz visual atractiva, con JavaScript para el manejo de la lógica y el consumo de la API pública del museo.",
+      "en": "React and CSS for a visually appealing interface, with JavaScript to handle the logic and consume the museum's public API."
+    },
+    "aprendizaje":{
+      "es": "Me permitió practicar el consumo de APIs públicas, la gestión de estados en React, y el diseño de interfaces visualmente atractivas.",
+      "en": "It allowed me to practice consuming public APIs, managing state in React, and designing visually appealing interfaces."
+    }
+  },
+  {
+    "id": 4,
+    "titulo": "Calculadora Web",
+    "tipo": "Frontend",
+    "imagen": "/assets/projects/ecommerce.png",
+    "linkRepo": "https://github.com/gnicoool/Lab7-Calculadora",
+    "linkDesplegado": null,
+    "stackUsado": ["react", "css", "typescript", "html", "docker"],
+    "queResuelve": {
+      "es": "Calculadora web con soporte de temas visuales para una experiencia de usuario personalizada.",
+      "en": "A web calculator with theme support for a personalized user experience."
+    },
+    "decisionTecnica": {
+      "es": "React y CSS para una interfaz atractiva con soporte de themes, y TypeScript para tipar correctamente la lógica de la calculadora.",
+      "en": "React and CSS for an attractive UI with theme support, and TypeScript to properly type the calculator's logic."
+    },
+    "aprendizaje":{
+      "es": "Me permitió practicar la gestión de estados en React, la implementación de lógica de calculadora, testing con eslint, vitest y storybook, y el diseño de interfaces con soporte de temas visuales.",
+      "en": "It allowed me to practice state management in React, implement calculator logic, and design interfaces with theme support."
+    }
+  },
+  {
+    "id": 5,
+    "titulo": "Snake",
+    "tipo": "Frontend",
+    "imagen": "/assets/projects/ecommerce.png",
+    "linkRepo": "https://github.com/gnicoool/Lab-6-Snake",
+    "linkDesplegado": null,
+    "stackUsado": ["react", "css", "javascript", "html", "docker"],
+    "queResuelve": {
+      "es": "Recreación del clásico juego Snake con soporte de temas visuales y controles de teclado.",
+      "en": "A recreation of the classic Snake game with theme support and keyboard controls."
+    },
+    "decisionTecnica": {
+      "es": "React y CSS para una interfaz atractiva con soporte de themes, y JavaScript para implementar la lógica del juego.",
+      "en": "React and CSS for an attractive UI with theme support, and JavaScript to implement the game logic."
+    },
+    "aprendizaje":{
+      "es": "Me permitió practicar la gestión de estados en React, la implementación de lógica de juego y el diseño de interfaces con soporte de temas visuales.",
+      "en": "It allowed me to practice state management in React, implement game logic, and design interfaces with theme support."
+    }
+  }
+]

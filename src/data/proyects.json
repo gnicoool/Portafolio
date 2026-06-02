@@ -68,7 +68,7 @@
     "tipo": "Frontend",
     "imagen": "/assets/proyects/calculadora.png",
     "linkRepo": "https://github.com/gnicoool/Lab7-Calculadora",
-    "linkDesplegado": null,
+    "linkDesplegado": "https://resplendent-marzipan-12c1e8.netlify.app/",
     "stackUsado": ["react", "css", "typescript", "html", "docker", "vite"],
     "queResuelve": {
       "es": "Herramienta de cálculo matemático con una interfaz personalizable que permite cambiar dinámicamente entre múltiples temas visuales sin perder el estado actual.",

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Metrophobic&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metrophobic&family=Mina:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
   /* ── project card tokens ──────────────────────────────────── */
@@ -19,6 +19,7 @@
   --radius-btn: 9px;
   --font-display: 'Playfair Display', serif;
   --font-body: 'Metrophobic', sans-serif;
+  --font-subtitle: 'Mina', serif;
   --shadow-card: none;
   --shadow-btn: none;
   --color-modal-item-bg: rgba(80, 95, 200, 0.25);

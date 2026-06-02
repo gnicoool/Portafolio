@@ -1,0 +1,102 @@
+.stack-card {
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 160px;
+  min-height: 170px;
+  padding: 18px 14px 16px;
+  cursor: default;
+  background: rgba(147, 147, 246, 0.207);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: transform 0.25s cubic-bezier(0.22, 0.68, 0, 1.2), border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.stack-card:hover {
+  transform: translateY(-10px) scale(1.06);
+  border-color: rgba(7, 16, 72, 0.899);
+  background: rgba(30, 15, 116, 0.526);
+  box-shadow:
+    0 20px 50px rgba(10, 14, 60, 0.6),
+    0 0 0 1px rgba(180, 190, 255, 0.3),
+    0 0 24px rgba(120, 140, 255, 0.25);
+}
+
+@media (hover: none) {
+  .stack-card:hover {
+    transform: none;
+    background: var(--color-bg-card);
+    border-color: var(--color-border);
+  }
+}
+
+.stack-card__name {
+  font: 500 1rem/1.2 var(--font-subtitle);
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.stack-card__icon-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 0;
+}
+
+.stack-card__icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 4px 10px rgba(104, 127, 255, 0.245));
+}
+
+.stack-card__icon--placeholder {
+  border-radius: 50%;
+  background: var(--color-modal-item-bg);
+  border: 1px solid var(--color-tag-border);
+}
+
+.stack-card:hover .stack-card__icon {
+  transform: scale(1.15);
+  filter: drop-shadow(0 6px 16px rgba(140, 159, 255, 0.399));
+}
+
+@media (hover: none) {
+  .stack-card:hover .stack-card__icon {
+    transform: none;
+  }
+}
+
+.stack-card__level {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: rgb(193, 193, 235);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .stack-card {
+    max-width: none;
+    min-height: 160px;
+    padding: 16px 12px 14px;
+  }
+
+  .stack-card__name {
+    font-size: 0.92rem;
+  }
+
+  .stack-card__icon {
+    width: 56px;
+    height: 56px;
+  }
+}

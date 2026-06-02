@@ -3,105 +3,105 @@
     "id": 1,
     "titulo": "Cine Web",
     "tipo": "Fullstack",
-    "imagen": "/assets/projects/cine.png",
+    "imagen": "/assets/proyects/movies.png",
     "linkRepo": "https://github.com/gnicoool/ProyectMoviesWeb-Frontend",
     "linkDesplegado": "https://gnicoool.github.io/ProyectMoviesWeb-Frontend/",
     "stackUsado": ["javascript", "html", "css", "python", "fastapi", "postgresql", "docker"],
     "queResuelve": {
-      "es": "Permite subir y buscar películas agregadas por usuarios, con manejo de ratings.",
-      "en": "Enables real-time movie and billboard search with rating management."
+      "es": "Plataforma interactiva que centraliza la catalogación de películas mediante contenido generado por usuarios, incluyendo un sistema dinámico de calificaciones.",
+      "en": "An interactive platform that centralizes movie cataloging through user-generated content, featuring a dynamic rating system."
     },
     "decisionTecnica": {
-      "es": "Elegí este stack para afianzar las bases del desarrollo web vanilla, separando frontend y backend en repositorios independientes. FastAPI resultó ideal por su rapidez y fácil integración con PostgreSQL.",
-      "en": "I chose vanilla JavaScript and HTML/CSS to strengthen my web fundamentals, keeping frontend and backend in separate repos. FastAPI was the natural backend choice for its speed and seamless PostgreSQL integration."
+      "es": "Diseñado bajo una arquitectura desacoplada separando Frontend y Backend en repositorios independientes. Se utilizó FastAPI por su alto rendimiento asíncrono y su integración nativa con PostgreSQL.",
+      "en": "Designed under a decoupled architecture, separating the Frontend and Backend into independent repositories. FastAPI was chosen for its high asynchronous performance and native integration with PostgreSQL."
     },
-    "aprendizaje":{
-      "es": "Me permitió practicar el desarrollo fullstack, la implementación de lógica de negocio en FastAPI, y el diseño de interfaces con HTML/CSS.",
-      "en": "It allowed me to practice fullstack development, business logic implementation in FastAPI, using SQLAlchemy ORM for data management, and interface design with HTML/CSS."
+    "aprendizaje": {
+      "es": "Dominio de las bases del desarrollo web con JavaScript vanilla y manipulación del DOM, además del diseño de endpoints RESTful eficientes y modelado de datos relacionales.",
+      "en": "Mastered web development fundamentals using vanilla JavaScript and DOM manipulation, alongside designing efficient RESTful endpoints and relational data modeling."
     }
   },
   {
     "id": 2,
     "titulo": "E-commerce Supermercado",
     "tipo": "Fullstack",
-    "imagen": "/assets/projects/ecommerce.png",
+    "imagen": "/assets/proyects/super.png",
     "linkRepo": "https://github.com/gnicoool/Proyecto2_BD/tree/proyecto-3",
     "linkDesplegado": "https://supermercado-web-60of.onrender.com/login",
     "stackUsado": ["react", "tailwind", "fastapi", "postgresql", "typescript", "html", "css", "docker"],
     "queResuelve": {
-      "es": "Facilita la gestión integral de empleados, proveedores, productos, ventas y compras en un entorno comercial.",
-      "en": "Streamlines the management of employees, suppliers, products, sales, and purchases in a commercial environment."
+      "es": "Sistema de gestión comercial integral que digitaliza y automatiza el control de inventarios, roles de usuarios (administrador/vendedor), proveedores y transacciones en tiempo real.",
+      "en": "An all-in-one commercial management system that digitalizes and automates inventory control, role-based access (admin/seller), suppliers, and real-time transactions."
     },
     "decisionTecnica": {
-      "es": "React y Tailwind para una interfaz atractiva y responsive, FastAPI con SQLAlchemy como ORM para un backend eficiente, y PostgreSQL como base de datos robusta.",
-      "en": "React and Tailwind for a responsive UI, FastAPI with SQLAlchemy ORM for an efficient backend, and PostgreSQL for a robust database."
+      "es": "Combinación de React y TypeScript para asegurar un tipado fuerte en la UI, Tailwind CSS para un diseño ágil y responsive, y Docker para garantizar la paridad del entorno entre desarrollo y producción.",
+      "en": "Combined React and TypeScript to ensure strong typing across the UI, Tailwind CSS for agile and responsive styling, and Docker to guarantee environment parity between development and production."
     },
-    "aprendizaje":{
-      "es": "Me permitió practicar el desarrollo fullstack, la implementación de lógica de negocio en FastAPI, el uso de ORM para la gestión de datos, y el diseño de interfaces con Tailwind.",
-      "en": "It allowed me to practice fullstack development, state management in React, business logic implementation in FastAPI, and interface design with Tailwind."
+    "aprendizaje": {
+      "es": "Implementación de lógica de negocio compleja utilizando SQLAlchemy como ORM, control de accesos por roles, y optimización de flujos CRUD complejos en aplicaciones de gran escala.",
+      "en": "Implemented complex business logic using SQLAlchemy ORM, role-based access control, and optimized complex CRUD operations for scale."
     }
   },
   {
     "id": 3,
     "titulo": "Museo Web",
     "tipo": "Frontend",
-    "imagen": "/assets/projects/ecommerce.png",
+    "imagen": "/assets/proyects/museo.png",
     "linkRepo": "https://github.com/gnicoool/museo-React",
     "linkDesplegado": null,
-    "stackUsado": ["react", "javascript", "html", "css", "docker"],
+    "stackUsado": ["react", "javascript", "html", "css", "docker", "vite"],
     "queResuelve": {
-      "es": "Facilita la búsqueda y exploración de obras de arte del Instituto de Arte de Chicago mediante su API pública.",
-      "en": "Enables easy search and exploration of artworks from the Art Institute of Chicago using its public API."
+      "es": "Explorador de arte interactivo que conecta a los usuarios con las colecciones del Instituto de Arte de Chicago, facilitando búsquedas avanzadas y filtrado de obras en tiempo real.",
+      "en": "An interactive art explorer that connects users with the Art Institute of Chicago collections, enabling advanced search and real-time artwork filtering."
     },
     "decisionTecnica": {
-      "es": "React y CSS para una interfaz visual atractiva, con JavaScript para el manejo de la lógica y el consumo de la API pública del museo.",
-      "en": "React and CSS for a visually appealing interface, with JavaScript to handle the logic and consume the museum's public API."
+      "es": "Se eligió Vite como empaquetador por su velocidad de desarrollo en caliente y React para construir una SPA fluida basada en el consumo asíncrono de APIs externas públicas.",
+      "en": "Vite was chosen as the bundler for its ultra-fast hot module replacement, and React to build a fluid SPA fueled by asynchronous public API consumption."
     },
-    "aprendizaje":{
-      "es": "Me permitió practicar el consumo de APIs públicas, la gestión de estados en React, y el diseño de interfaces visualmente atractivas.",
-      "en": "It allowed me to practice consuming public APIs, managing state in React, and designing visually appealing interfaces."
+    "aprendizaje": {
+      "es": "Manejo avanzado de estados globales mediante Context API, diseño de componentes modulares altamente reutilizables y control eficiente de respuestas de red con paginación.",
+      "en": "Advanced global state management using the Context API, creation of highly reusable modular components, and efficient handling of paginated API network responses."
     }
   },
   {
     "id": 4,
     "titulo": "Calculadora Web",
     "tipo": "Frontend",
-    "imagen": "/assets/projects/ecommerce.png",
+    "imagen": "/assets/proyects/calculadora.png",
     "linkRepo": "https://github.com/gnicoool/Lab7-Calculadora",
     "linkDesplegado": null,
-    "stackUsado": ["react", "css", "typescript", "html", "docker"],
+    "stackUsado": ["react", "css", "typescript", "html", "docker", "vite"],
     "queResuelve": {
-      "es": "Calculadora web con soporte de temas visuales para una experiencia de usuario personalizada.",
-      "en": "A web calculator with theme support for a personalized user experience."
+      "es": "Herramienta de cálculo matemático con una interfaz personalizable que permite cambiar dinámicamente entre múltiples temas visuales sin perder el estado actual.",
+      "en": "A mathematical calculation tool featuring a customizable interface that allows dynamic switching between multiple visual themes without losing the active state."
     },
     "decisionTecnica": {
-      "es": "React y CSS para una interfaz atractiva con soporte de themes, y TypeScript para tipar correctamente la lógica de la calculadora.",
-      "en": "React and CSS for an attractive UI with theme support, and TypeScript to properly type the calculator's logic."
+      "es": "Uso estricto de TypeScript para blindar la lógica aritmética contra errores de tipo en tiempo de ejecución, acoplado con variables CSS para el sistema dinámico de tematización.",
+      "en": "Strict use of TypeScript to safeguard arithmetic logic against runtime type errors, paired with CSS variables to drive the dynamic theme-switching engine."
     },
-    "aprendizaje":{
-      "es": "Me permitió practicar la gestión de estados en React, la implementación de lógica de calculadora, testing con eslint, vitest y storybook, y el diseño de interfaces con soporte de temas visuales.",
-      "en": "It allowed me to practice state management in React, implement calculator logic, and design interfaces with theme support."
+    "aprendizaje": {
+      "es": "Implementación de buenas prácticas de desarrollo mediante testing unitario con Vitest, documentación de componentes con Storybook, y gestión de dependencias ágil usando Yarn.",
+      "en": "Implemented modern development best practices through unit testing with Vitest, component isolation and documentation with Storybook, and agile package management using Yarn."
     }
   },
   {
     "id": 5,
-    "titulo": "Snake",
+    "titulo": "Snake Game",
     "tipo": "Frontend",
-    "imagen": "/assets/projects/ecommerce.png",
+    "imagen": "/assets/proyects/snake.png",
     "linkRepo": "https://github.com/gnicoool/Lab-6-Snake",
     "linkDesplegado": null,
-    "stackUsado": ["react", "css", "javascript", "html", "docker"],
+    "stackUsado": ["react", "css", "javascript", "html", "vite"],
     "queResuelve": {
-      "es": "Recreación del clásico juego Snake con soporte de temas visuales y controles de teclado.",
-      "en": "A recreation of the classic Snake game with theme support and keyboard controls."
+      "es": "Recreación moderna del clásico videojuego arcade con soporte adaptativo para controles de teclado, renderizado de grillas dinámicas y personalización de skins estéticas.",
+      "en": "A modern recreation of the classic arcade video game featuring adaptive keyboard control support, dynamic grid rendering, and aesthetic skin customization."
     },
     "decisionTecnica": {
-      "es": "React y CSS para una interfaz atractiva con soporte de themes, y JavaScript para implementar la lógica del juego.",
-      "en": "React and CSS for an attractive UI with theme support, and JavaScript to implement the game logic."
+      "es": "Construido en React para aprovechar el ciclo de vida de los componentes y hooks de efectos en el manejo de loops de juego, colisiones y sincronización de intervalos de tiempo.",
+      "en": "Built with React to leverage component lifecycles and effect hooks to manage game loops, collision detection, and interval time synchronization."
     },
-    "aprendizaje":{
-      "es": "Me permitió practicar la gestión de estados en React, la implementación de lógica de juego y el diseño de interfaces con soporte de temas visuales.",
-      "en": "It allowed me to practice state management in React, implement game logic, and design interfaces with theme support."
+    "aprendizaje": {
+      "es": "Modelado de estados complejos bidimensionales (matrices), captura limpia de eventos del teclado global del navegador y desarrollo de algoritmos de movimiento lineal continuo.",
+      "en": "Modeled complex two-dimensional states (matrices), handled global browser keyboard listener events cleanly, and developed continuous linear movement algorithms."
     }
   }
 ]

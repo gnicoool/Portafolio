@@ -2,146 +2,137 @@
   {
     "id": "javascript",
     "nombre": "JavaScript",
-    "categoria": "lenguaje",
-    "nivel": "Avanzado",
+    "categoria": "frontend",
+    "categoriaLabel": { "es": "Frontend", "en": "Frontend" },
+    "nivel": { "es": "Avanzado", "en": "Advanced" },
     "logo": "/assets/logos/javascript.svg"
   },
   {
     "id": "typescript",
     "nombre": "TypeScript",
-    "categoria": "lenguaje",
-    "nivel": "Avanzado",
-    "logo": "/assets/logos/typescript.svg"
-  },
-  {
-    "id": "python",
-    "nombre": "Python",
-    "categoria": "lenguaje",
-    "nivel": "Avanzado",
-    "logo": "/assets/logos/python.svg"
-  },
-  {
-    "id": "java",
-    "nombre": "Java",
-    "categoria": "lenguaje",
-    "nivel": "Avanzado",
-    "logo": "/assets/logos/java.svg"
-  },
-  {
-    "id": "c++",
-    "nombre": "C++",
-    "categoria": "lenguaje",
-    "nivel": "Basico",
-    "logo": "/assets/logos/c++.svg"
-  },
-  {
-    "id": "kotlin",
-    "nombre": "Kotlin",
-    "categoria": "lenguaje",
-    "nivel": "Intermedio",
-    "logo": "/assets/logos/kotlin.svg"
-  },
-
-  {
-    "id": "react",
-    "nombre": "React",
     "categoria": "frontend",
-    "nivel": "Avanzado",
-    "logo": "/assets/logos/react.svg"
+    "categoriaLabel": { "es": "Frontend", "en": "Frontend" },
+    "nivel": { "es": "Avanzado", "en": "Advanced" },
+    "logo": "/assets/logos/typescript.svg"
   },
   {
     "id": "html",
     "nombre": "HTML5",
     "categoria": "frontend",
-    "nivel": "Avanzado",
+    "categoriaLabel": { "es": "Frontend", "en": "Frontend" },
+    "nivel": { "es": "Avanzado", "en": "Advanced" },
     "logo": "/assets/logos/html.svg"
   },
   {
     "id": "css",
     "nombre": "CSS3",
     "categoria": "frontend",
-    "nivel": "Avanzado",
+    "categoriaLabel": { "es": "Frontend", "en": "Frontend" },
+    "nivel": { "es": "Avanzado", "en": "Advanced" },
     "logo": "/assets/logos/css.svg"
+  },
+  {
+    "id": "react",
+    "nombre": "React",
+    "categoria": "frontend",
+    "categoriaLabel": { "es": "Frontend", "en": "Frontend" },
+    "nivel": { "es": "Avanzado", "en": "Advanced" },
+    "logo": "/assets/logos/react.svg"
   },
   {
     "id": "tailwind",
     "nombre": "Tailwind CSS",
     "categoria": "frontend",
-    "nivel": "Intermedio",
+    "categoriaLabel": { "es": "Frontend", "en": "Frontend" },
+    "nivel": { "es": "Intermedio", "en": "Intermediate" },
     "logo": "/assets/logos/tailwind.svg"
   },
-
+  {
+    "id": "python",
+    "nombre": "Python",
+    "categoria": "backend",
+    "categoriaLabel": { "es": "Backend", "en": "Backend" },
+    "nivel": { "es": "Avanzado", "en": "Advanced" },
+    "logo": "/assets/logos/python.svg"
+  },
   {
     "id": "fastapi",
     "nombre": "FastAPI",
     "categoria": "backend",
-    "nivel": "Intermedio",
+    "categoriaLabel": { "es": "Backend", "en": "Backend" },
+    "nivel": { "es": "Intermedio", "en": "Intermediate" },
     "logo": "/assets/logos/fastapi.svg"
   },
-
   {
     "id": "postgresql",
     "nombre": "PostgreSQL",
-    "categoria": "database",
-    "nivel": "Avanzado",
-    "logo": "/assets/logos/postgresql.svg"
+    "categoria": "backend",
+    "categoriaLabel": { "es": "Backend", "en": "Backend" },
+    "nivel": { "es": "Avanzado", "en": "Advanced" },
+    "logo": "/assets/logos/postgres.svg"
   },
-
+  {
+    "id": "vite",
+    "nombre": "Vite",
+    "categoria": "tool",
+    "categoriaLabel": { "es": "Herramientas", "en": "Tools" },
+    "nivel": { "es": "Avanzado", "en": "Advanced" },
+    "logo": "/assets/logos/vite.svg"
+  },
   {
     "id": "docker",
     "nombre": "Docker",
-    "categoria": "devops",
-    "nivel": "Avanzado",
+    "categoria": "tool",
+    "categoriaLabel": { "es": "Herramientas", "en": "Tools" },
+    "nivel": { "es": "Avanzado", "en": "Advanced" },
     "logo": "/assets/logos/docker.svg"
   },
   {
-    "id": "render",
-    "nombre": "Render",
-    "categoria": "devops",
-    "nivel": "Intermedio",
-    "logo": "/assets/logos/render.svg"
+    "id": "eslint",
+    "nombre": "ESLint",
+    "categoria": "tool",
+    "categoriaLabel": { "es": "Herramientas", "en": "Tools" },
+    "nivel": { "es": "Avanzado", "en": "Advanced" },
+    "logo": "/assets/logos/eslint.svg"
   },
   {
-    "id": "ghactions",
-    "nombre": "GitHub Actions",
-    "categoria": "devops",
-    "nivel": "Básico",
-    "logo": "/assets/logos/github-actions.svg"
+    "id": "storybook",
+    "nombre": "Storybook",
+    "categoria": "tool",
+    "categoriaLabel": { "es": "Herramientas", "en": "Tools" },
+    "nivel": { "es": "Intermedio", "en": "Intermediate" },
+    "logo": "/assets/logos/storybook.svg"
   },
-
   {
     "id": "git",
     "nombre": "Git",
-    "categoria": "herramienta",
-    "nivel": "Avanzado",
+    "categoria": "tool",
+    "categoriaLabel": { "es": "Herramientas", "en": "Tools" },
+    "nivel": { "es": "Avanzado", "en": "Advanced" },
     "logo": "/assets/logos/git.svg"
   },
   {
     "id": "github",
     "nombre": "GitHub",
-    "categoria": "herramienta",
-    "nivel": "Avanzado",
+    "categoria": "tool",
+    "categoriaLabel": { "es": "Herramientas", "en": "Tools" },
+    "nivel": { "es": "Avanzado", "en": "Advanced" },
     "logo": "/assets/logos/github.svg"
   },
   {
     "id": "vscode",
     "nombre": "Visual Studio Code",
-    "categoria": "herramienta",
-    "nivel": "Avanzado",
+    "categoria": "tool",
+    "categoriaLabel": { "es": "Herramientas", "en": "Tools" },
+    "nivel": { "es": "Avanzado", "en": "Advanced" },
     "logo": "/assets/logos/vscode.svg"
   },
   {
     "id": "figma",
     "nombre": "Figma",
-    "categoria": "herramienta",
-    "nivel": "Avanzado",
+    "categoria": "tool",
+    "categoriaLabel": { "es": "Herramientas", "en": "Tools" },
+    "nivel": { "es": "Avanzado", "en": "Advanced" },
     "logo": "/assets/logos/figma.svg"
-  },
-  {
-    "id": "androidstudio",
-    "nombre": "Android Studio",
-    "categoria": "herramienta",
-    "nivel": "Intermedio",
-    "logo": "/assets/logos/androidstudio.svg"
   }
 ]

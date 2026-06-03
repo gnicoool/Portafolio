@@ -98,8 +98,21 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
+  background: #060918;
+}
+
+#home,
+#sobre,
+#proyectos,
+#stack,
+#contacto {
+  scroll-margin-top: calc(var(--navbar-height) + 16px);
 }
 
 /* ── shared project UI ───────────────────────────────────── */
@@ -264,12 +277,13 @@ body {
   }
 }
 
+
 #root {
-  width: 1126px;
-  max-width: 100%;
+  width: 100%;
+  max-width: none;
   margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
+  text-align: initial;
+  border-inline: none;
   min-height: 100svh;
   display: flex;
   flex-direction: column;

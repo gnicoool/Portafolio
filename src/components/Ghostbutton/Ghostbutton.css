@@ -1,0 +1,46 @@
+.ghost-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 9px 22px;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  letter-spacing: 0.07em;
+  color: var(--color-modal-text);
+  text-decoration: none;
+  background: rgba(22, 5, 62, 0.682);
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  transition: color 0.22s ease, border-color 0.22s ease, transform 0.18s ease;
+}
+
+.ghost-btn__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: var(--color-modal-item-bg);
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.ghost-btn__text {
+  position: relative;
+  z-index: 1;
+}
+
+.ghost-btn:hover {
+  color: var(--color-title);
+  border-color: var(--color-border-hover);
+  transform: translateY(-2px);
+}
+
+.ghost-btn:hover .ghost-btn__bg {
+  opacity: 1;
+}
+
+.ghost-btn:active {
+  transform: translateY(0);
+}

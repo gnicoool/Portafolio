@@ -1,16 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
-import { GitHub, Globe, User, Terminal, Layers, Phone, Menu, X } from 'react-feather';
+import { GitHub, Globe, Home, User, Terminal, Layers, Phone, Menu, X } from 'react-feather';
 import './Navbar.css';
 
 const NAV_ITEMS = [
-  { id: 'idioma', label: 'Idioma', href: '#' },
-  { id: 'sobre', label: 'Sobre mí', href: '#sobre' },
-  { id: 'proyectos', label: 'Proyectos', href: '#proyectos' },
-  { id: 'stack', label: 'Stack', href: '#stack' },
-  { id: 'contacto', label: 'Contacto', href: '#contacto' },
+  { id: 'home', label: 'Inicio', href: '/#home' },
+  { id: 'sobre', label: 'Sobre mí', href: '/#sobre' },
+  { id: 'proyectos', label: 'Proyectos', href: '/proyectos' },
+  { id: 'stack', label: 'Stack', href: '/stack' },
+  { id: 'contacto', label: 'Contacto', href: '/#contacto' },
+  { id: 'idioma', label: 'Idioma', href: null },
 ];
 
 const NAV_ICONS = {
+  home: Home,
   idioma: Globe,
   sobre: User,
   proyectos: Terminal,
@@ -43,7 +45,9 @@ export function Navbar({ name = 'Jackelyn Girón', githubUrl = 'https://github.c
 
   return (
     <header className="navbar">
-      <span className="navbar__name">{name}</span>
+      <a href="/#home" className="navbar__name">
+        {name}
+      </a>
 
       <div className="navbar__actions">
         <a
@@ -77,16 +81,25 @@ export function Navbar({ name = 'Jackelyn Girón', githubUrl = 'https://github.c
 
                 return (
                   <li key={item.id} style={{ '--i': index }}>
-                    <a
-                      href={item.href}
-                      className="navbar__dropdown-item"
-                      onClick={() => setOpen(false)}
-                    >
-                      <span className="navbar__dropdown-icon">
-                        <Icon size={16} />
-                      </span>
-                      <span>{item.label}</span>
-                    </a>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        className="navbar__dropdown-item"
+                        onClick={() => setOpen(false)}
+                      >
+                        <span className="navbar__dropdown-icon">
+                          <Icon size={16} />
+                        </span>
+                        <span>{item.label}</span>
+                      </a>
+                    ) : (
+                      <button type="button" className="navbar__dropdown-item navbar__dropdown-item--button">
+                        <span className="navbar__dropdown-icon">
+                          <Icon size={16} />
+                        </span>
+                        <span>{item.label}</span>
+                      </button>
+                    )}
                   </li>
                 );
               })}

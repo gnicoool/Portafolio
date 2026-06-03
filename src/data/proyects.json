@@ -26,7 +26,7 @@
     "tipo": "Fullstack",
     "imagen": "/assets/proyects/super.png",
     "linkRepo": "https://github.com/gnicoool/Proyecto2_BD/tree/proyecto-3",
-    "linkDesplegado": "https://supermercado-web-60of.onrender.com/login",
+    "linkDesplegado": "https://supermercado-web-60of.onrender.com/",
     "stackUsado": [
       "react",
       "tailwind",

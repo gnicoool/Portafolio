@@ -11,6 +11,7 @@
   color: var(--color-modal-text);
   text-decoration: none;
   background: rgba(22, 5, 62, 0.682);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-btn);
   cursor: pointer;
   transition: color 0.22s ease, border-color 0.22s ease, transform 0.18s ease;
@@ -43,4 +44,12 @@
 
 .ghost-btn:active {
   transform: translateY(0);
+}
+
+.ghost-btn--active {
+  color: var(--color-title);
+}
+
+.ghost-btn--active .ghost-btn__bg {
+  opacity: 1;
 }

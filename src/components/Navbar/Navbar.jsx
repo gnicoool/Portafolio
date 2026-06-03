@@ -63,6 +63,7 @@ export function Navbar({ name = 'Jackelyn Girón', githubUrl = 'https://github.c
   return (
     <header className="navbar">
       <a href="/#home" className="navbar__name">
+        <img src="/favicon.svg" alt="" className="navbar__favicon" aria-hidden="true" />
         {name}
       </a>
 

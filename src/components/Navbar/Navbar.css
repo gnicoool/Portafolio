@@ -14,12 +14,21 @@
 }
 
 .navbar__name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font: 400 1.1rem/1.2 var(--font-display);
   color: var(--color-title);
   letter-spacing: 0.01em;
   white-space: nowrap;
   text-decoration: none;
   transition: opacity 0.2s ease;
+}
+
+.navbar__favicon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
 }
 
 .navbar__name:hover {

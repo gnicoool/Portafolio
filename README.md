@@ -1,16 +1,82 @@
-# React + Vite
+# Portafolio — Jackelyn Girón
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Portafolio](https://portafoliojg.netlify.app/)
+---
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + **JavaScript** (ES Modules)
+- **Vite 8** — bundler y dev server con HMR
+- **React Router v7** — navegación client-side
+- **ESLint 9** + **Prettier** — linting y formato
+- **Storybook 10** — desarrollo y documentación de componentes
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Estructura
 
-## Expanding the ESLint configuration
+```
+src/
+├── assets/          # Imágenes, logos SVG, CV PDF
+├── components/      # Componentes reutilizables
+│   ├── Navbar/
+│   ├── CardsProyecto/
+│   ├── CardsStack/
+│   ├── Ghostbutton/
+│   ├── PageLayout/
+│   ├── aboutme/
+│   └── contact/
+├── context/
+│   ├── LanguageContext.jsx   # Proveedor i18n (es / en)
+│   └── translations/        # es.json · en.json
+├── data/            # proyects.json · stack.json
+├── pages/
+│   ├── Home/
+│   ├── Proyectos/
+│   └── Stack/
+├── utils/           # mapProject.js · mapStack.js
+├── App.jsx          # Rutas
+└── main.jsx
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Levantar en local
+
+```bash
+npm install
+npm run dev
+```
+
+### Otros comandos
+
+| Comando                  | Descripción                         |
+| ------------------------ | ----------------------------------- |
+| `npm run build`          | Build de producción en `dist/`      |
+| `npm run lint`           | Correr ESLint                       |
+| `npm run format`         | Formatear con Prettier              |
+| `npm run storybook`      | Storybook en http://localhost:6006  |
+
+
+---
+
+## Storybook
+
+Los componentes tienen historias en archivos `*.stories.jsx` junto a su fuente. Para desarrollar o revisar un componente de forma aislada:
+
+```bash
+npm run storybook
+```
+
+---
+
+## Rutas
+
+| Ruta          | Página        |
+| ------------- | ------------- |
+| `/`           | Home          |
+| `/proyectos`  | Proyectos     |
+| `/stack`      | Stack         |
+| `*`           | → `/`         |
+
+---

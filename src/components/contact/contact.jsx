@@ -1,45 +1,26 @@
-import { Download, GitHub, Linkedin, Mail } from 'react-feather';
+import { GitHub, Linkedin, Mail } from 'react-feather';
 import { useLanguage } from '../../context/LanguageContext.jsx';
 import './contact.css';
 
-const LINK_DEFS = [
+const ICON_LINKS = [
   {
     id: 'linkedin',
-    labelKey: 'LinkedIn',
+    label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/jackelyn-girón-5ba84b39a',
-    external: true,
     icon: Linkedin,
   },
   {
     id: 'github',
-    labelKey: 'GitHub',
+    label: 'GitHub',
     href: 'https://github.com/gnicoool',
-    external: true,
     icon: GitHub,
-  },
-  {
-    id: 'mail',
-    labelKey: 'mail',
-    href: 'mailto:nicollegiron11@gmail.com',
-    icon: Mail,
-  },
-  {
-    id: 'cv',
-    labelKey: 'downloadCv',
-    href: '#',
-    download: true,
-    icon: Download,
   },
 ];
 
+const MAIL = 'nicollegiron11@gmail.com';
+
 export function Contact() {
   const { t } = useLanguage();
-
-  const links = LINK_DEFS.map((def) => ({
-    ...def,
-    label:
-      def.id === 'mail' ? t.contact.mail : def.id === 'cv' ? t.contact.downloadCv : def.labelKey,
-  }));
 
   return (
     <section className="contact portfolio-section" id="contacto">
@@ -47,23 +28,27 @@ export function Contact() {
       <p className="portfolio-section__subtitle contact__subtitle">{t.contact.subtitle}</p>
 
       <div className="contact__links">
-        {links.map((link) => {
-          const Icon = link.icon;
+        {ICON_LINKS.map(({ id, label, href, icon: Icon }) => (
+          <a
+            key={id}
+            href={href}
+            className={`contact__btn contact__btn--${id}`}
+            aria-label={label}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon size={22} />
+          </a>
+        ))}
 
-          return (
-            <a
-              key={link.id}
-              href={link.href}
-              className={`contact__btn contact__btn--${link.id}`}
-              aria-label={link.label}
-              target={link.external ? '_blank' : undefined}
-              rel={link.external ? 'noopener noreferrer' : undefined}
-              download={link.download || undefined}
-            >
-              <Icon size={22} />
-            </a>
-          );
-        })}
+        <a
+          href={`mailto:${MAIL}`}
+          className="contact__btn contact__btn--mail"
+          aria-label={t.contact.mail}
+        >
+          <Mail size={18} />
+          <span>{MAIL}</span>
+        </a>
       </div>
     </section>
   );

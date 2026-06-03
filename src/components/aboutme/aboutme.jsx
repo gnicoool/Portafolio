@@ -1,12 +1,13 @@
 import { Download } from 'react-feather';
 import { useLanguage, interpolate } from '../../context/LanguageContext.jsx';
 import profilePhoto from '../../assets/FOTO.jpeg';
+import cvPdf from '../../assets/Jackelyn-Giron-CV.pdf';
 import './aboutme.css';
 
 const CONTENT = {
   name: 'Jackelyn Girón',
   university: 'Universidad del Valle de Guatemala',
-  cvUrl: '#',
+  cvUrl: cvPdf,
 };
 
 export function AboutMe() {

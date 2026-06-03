@@ -30,6 +30,15 @@
   text-decoration: none;
   background: #0d055c;
   border-radius: var(--radius-btn);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.contact__btn--mail {
+  width: auto;
+  gap: 10px;
+  padding: 0 20px;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
 }
 
 .contact__btn:hover {

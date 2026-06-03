@@ -91,19 +91,19 @@ export function ModalProyecto({ project, onClose }) {
           <div className="pm-sections">
             <section className="pm-section">
               <h4 className="pm-section-label">
-                <span className="pm-section-icon"></span> {t.modal.whatSolves}
+                <span className="pm-section-icon" /> {t.modal.whatSolves}
               </h4>
               <p className="pm-section-text">{description}</p>
             </section>
             <section className="pm-section">
               <h4 className="pm-section-label">
-                <span className="pm-section-icon"></span> {t.modal.technicalDecision}
+                <span className="pm-section-icon" /> {t.modal.technicalDecision}
               </h4>
               <p className="pm-section-text">{technicalDecision}</p>
             </section>
             <section className="pm-section">
               <h4 className="pm-section-label">
-                <span className="pm-section-icon"></span> {t.modal.learning}
+                <span className="pm-section-icon" /> {t.modal.learning}
               </h4>
               <p className="pm-section-text">{learning}</p>
             </section>

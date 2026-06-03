@@ -23,7 +23,7 @@ export function Proyectos() {
   const visible =
     activeFilter === 'todos' ? projects : projects.filter((p) => p.tipo === activeFilter);
 
-  const selected = selectedId != null ? (projects.find((p) => p.id === selectedId) ?? null) : null;
+  const selected = selectedId !== null ? (projects.find((p) => p.id === selectedId) ?? null) : null;
 
   return (
     <PageLayout>

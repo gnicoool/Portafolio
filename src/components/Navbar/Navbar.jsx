@@ -43,15 +43,17 @@ export function Navbar({ name = 'Jackelyn Girón', githubUrl = 'https://github.c
     { id: 'idioma', label: t.nav.language, href: null },
   ];
 
+  function closeMenu() {
+    setOpen(false);
+    setLangOpen(false);
+  }
+
   useEffect(() => {
-    if (!open) {
-      setLangOpen(false);
-      return;
-    }
+    if (!open) return;
 
     const handler = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setOpen(false);
+        closeMenu();
       }
     };
 
@@ -60,15 +62,14 @@ export function Navbar({ name = 'Jackelyn Girón', githubUrl = 'https://github.c
   }, [open]);
 
   useEffect(() => {
-    const handler = (event) => event.key === 'Escape' && setOpen(false);
+    const handler = (event) => event.key === 'Escape' && closeMenu();
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
   }, []);
 
   function handleSelectLang(code) {
     setLang(code);
-    setLangOpen(false);
-    setOpen(false);
+    closeMenu();
   }
 
   return (
@@ -93,7 +94,12 @@ export function Navbar({ name = 'Jackelyn Girón', githubUrl = 'https://github.c
           <button
             type="button"
             className={`navbar__icon-btn${open ? ' navbar__icon-btn--active' : ''}`}
-            onClick={() => setOpen((value) => !value)}
+            onClick={() =>
+              setOpen((value) => {
+                if (value) setLangOpen(false);
+                return !value;
+              })
+            }
             aria-label={t.nav.menu}
             aria-expanded={open}
           >
@@ -148,11 +154,7 @@ export function Navbar({ name = 'Jackelyn Girón', githubUrl = 'https://github.c
 
                 return (
                   <li key={item.id} style={{ '--i': index }}>
-                    <a
-                      href={item.href}
-                      className="navbar__dropdown-item"
-                      onClick={() => setOpen(false)}
-                    >
+                    <a href={item.href} className="navbar__dropdown-item" onClick={closeMenu}>
                       <span className="navbar__dropdown-icon">
                         <Icon size={16} />
                       </span>

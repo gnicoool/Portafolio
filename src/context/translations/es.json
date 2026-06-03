@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "stack": "Stack",
+    "contact": "Contacto",
+    "language": "Idioma",
+    "menu": "Menú"
+  },
+  "home": {
+    "eyebrow": "Web developer",
+    "title": "Portafolio",
+    "scrollLabel": "Ir a Sobre mí",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "stack": "Stack",
+    "contact": "Contacto"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "intro": "Soy {{name}}, estoy en mi tercer año de Ing. Computación en la {{university}}.",
+    "bio": "Desarrolladora FullStack y diseñadora UI/UX apasionada por construir productos digitales con buena experiencia de usuario.",
+    "downloadCv": "Descargar CV"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tienes un proyecto en mente? Contáctame.",
+    "mail": "Correo",
+    "downloadCv": "Descargar CV"
+  },
+  "projects": {
+    "eyebrow": "Trabajo",
+    "title": "Proyectos",
+    "filterAll": "Todos",
+    "viewRepo": "Ver repositorio",
+    "viewProject": "Ver proyecto",
+    "viewMore": "Ver más"
+  },
+  "modal": {
+    "close": "Cerrar",
+    "viewRepo": "Ver repositorio",
+    "viewDeployed": "Ver proyecto desplegado",
+    "whatSolves": "¿Qué resuelve?",
+    "technicalDecision": "Decisión técnica",
+    "learning": "Aprendizaje"
+  },
+  "stack": {
+    "eyebrow": "Tecnologías",
+    "title": "Stack",
+    "filterAll": "Todos"
+  }
+}

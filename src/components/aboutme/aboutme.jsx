@@ -1,25 +1,27 @@
 import { Download } from 'react-feather';
+import { useLanguage, interpolate } from '../../context/LanguageContext.jsx';
 import profilePhoto from '../../assets/FOTO.jpeg';
 import './aboutme.css';
+
 const CONTENT = {
   name: 'Jackelyn Girón',
   university: 'Universidad del Valle de Guatemala',
-  year: 'tercer año de Ing. Computación',
-  bio: 'Desarrolladora FullStack y diseñadora UI/UX apasionada por construir productos digitales con buena experiencia de usuario.',
   cvUrl: '#',
 };
 
 export function AboutMe() {
+  const { t } = useLanguage();
+
   return (
     <section className="about portfolio-section" id="sobre">
       <div className="about__text">
-        <h2 className="portfolio-section__title">Sobre mí</h2>
+        <h2 className="portfolio-section__title">{t.about.title}</h2>
 
         <p className="portfolio-section__text">
-          Soy {CONTENT.name}, estoy en mi {CONTENT.year} en la {CONTENT.university}.
+          {interpolate(t.about.intro, { name: CONTENT.name, university: CONTENT.university })}
         </p>
 
-        <p className="portfolio-section__text">{CONTENT.bio}</p>
+        <p className="portfolio-section__text">{t.about.bio}</p>
       </div>
 
       <div className="about__right">
@@ -28,7 +30,7 @@ export function AboutMe() {
         </div>
         <a href={CONTENT.cvUrl} download className="portfolio-outline-btn about__cv-btn">
           <Download size={15} />
-          Descargar CV
+          {t.about.downloadCv}
         </a>
       </div>
     </section>

@@ -1,15 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import { GitHub, Globe, Home, User, Terminal, Layers, Phone, Menu, X } from 'react-feather';
+import { ChevronDown, GitHub, Globe, Home, Layers, Menu, Phone, Terminal, User, X } from 'react-feather';
+import { useLanguage } from '../../context/LanguageContext.jsx';
 import './Navbar.css';
-
-const NAV_ITEMS = [
-  { id: 'home', label: 'Inicio', href: '/#home' },
-  { id: 'sobre', label: 'Sobre mí', href: '/#sobre' },
-  { id: 'proyectos', label: 'Proyectos', href: '/proyectos' },
-  { id: 'stack', label: 'Stack', href: '/stack' },
-  { id: 'contacto', label: 'Contacto', href: '/#contacto' },
-  { id: 'idioma', label: 'Idioma', href: null },
-];
 
 const NAV_ICONS = {
   home: Home,
@@ -20,12 +12,31 @@ const NAV_ICONS = {
   contacto: Phone,
 };
 
+const LANG_OPTIONS = [
+  { code: 'es', label: 'Español' },
+  { code: 'en', label: 'English' },
+];
+
 export function Navbar({ name = 'Jackelyn Girón', githubUrl = 'https://github.com/gnicoool' }) {
   const [open, setOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const menuRef = useRef(null);
+  const { lang, setLang, t } = useLanguage();
+
+  const NAV_ITEMS = [
+    { id: 'home', label: t.nav.home, href: '/#home' },
+    { id: 'sobre', label: t.nav.about, href: '/#sobre' },
+    { id: 'proyectos', label: t.nav.projects, href: '/proyectos' },
+    { id: 'stack', label: t.nav.stack, href: '/stack' },
+    { id: 'contacto', label: t.nav.contact, href: '/#contacto' },
+    { id: 'idioma', label: t.nav.language, href: null },
+  ];
 
   useEffect(() => {
-    if (!open) return;
+    if (!open) {
+      setLangOpen(false);
+      return;
+    }
 
     const handler = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -42,6 +53,12 @@ export function Navbar({ name = 'Jackelyn Girón', githubUrl = 'https://github.c
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
   }, []);
+
+  function handleSelectLang(code) {
+    setLang(code);
+    setLangOpen(false);
+    setOpen(false);
+  }
 
   return (
     <header className="navbar">
@@ -65,7 +82,7 @@ export function Navbar({ name = 'Jackelyn Girón', githubUrl = 'https://github.c
             type="button"
             className={`navbar__icon-btn${open ? ' navbar__icon-btn--active' : ''}`}
             onClick={() => setOpen((value) => !value)}
-            aria-label="Menú"
+            aria-label={t.nav.menu}
             aria-expanded={open}
           >
             {open ? <X size={18} /> : <Menu size={18} />}
@@ -79,27 +96,54 @@ export function Navbar({ name = 'Jackelyn Girón', githubUrl = 'https://github.c
               {NAV_ITEMS.map((item, index) => {
                 const Icon = NAV_ICONS[item.id];
 
-                return (
-                  <li key={item.id} style={{ '--i': index }}>
-                    {item.href ? (
-                      <a
-                        href={item.href}
-                        className="navbar__dropdown-item"
-                        onClick={() => setOpen(false)}
+                if (item.id === 'idioma') {
+                  return (
+                    <li key={item.id} style={{ '--i': index }}>
+                      <button
+                        type="button"
+                        className="navbar__dropdown-item navbar__dropdown-item--button"
+                        onClick={() => setLangOpen((v) => !v)}
+                        aria-expanded={langOpen}
                       >
                         <span className="navbar__dropdown-icon">
                           <Icon size={16} />
                         </span>
                         <span>{item.label}</span>
-                      </a>
-                    ) : (
-                      <button type="button" className="navbar__dropdown-item navbar__dropdown-item--button">
-                        <span className="navbar__dropdown-icon">
-                          <Icon size={16} />
-                        </span>
-                        <span>{item.label}</span>
+                        <ChevronDown
+                          size={13}
+                          className={`navbar__lang-chevron${langOpen ? ' navbar__lang-chevron--open' : ''}`}
+                        />
                       </button>
-                    )}
+
+                      <div className={`navbar__lang-submenu${langOpen ? ' navbar__lang-submenu--open' : ''}`}>
+                        {LANG_OPTIONS.map(({ code, label }) => (
+                          <button
+                            key={code}
+                            type="button"
+                            className={`navbar__lang-option${lang === code ? ' navbar__lang-option--active' : ''}`}
+                            onClick={() => handleSelectLang(code)}
+                          >
+                            <span className="navbar__lang-dot" />
+                            {label}
+                          </button>
+                        ))}
+                      </div>
+                    </li>
+                  );
+                }
+
+                return (
+                  <li key={item.id} style={{ '--i': index }}>
+                    <a
+                      href={item.href}
+                      className="navbar__dropdown-item"
+                      onClick={() => setOpen(false)}
+                    >
+                      <span className="navbar__dropdown-icon">
+                        <Icon size={16} />
+                      </span>
+                      <span>{item.label}</span>
+                    </a>
                   </li>
                 );
               })}

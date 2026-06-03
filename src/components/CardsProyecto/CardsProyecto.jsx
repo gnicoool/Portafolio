@@ -1,7 +1,10 @@
-import {Eye, GitHub} from 'react-feather';
-import "./CardsProyecto.css";
+import { Eye, GitHub } from 'react-feather';
+import { useLanguage } from '../../context/LanguageContext.jsx';
+import './CardsProyecto.css';
 
 export function CardsProyecto({ image, title, stack = [], onVerMas, linkRepo, linkDesplegado }) {
+  const { t } = useLanguage();
+
   return (
     <article className="project-card">
       <div className="project-card__image-wrapper">
@@ -31,7 +34,7 @@ export function CardsProyecto({ image, title, stack = [], onVerMas, linkRepo, li
               target="_blank"
               rel="noopener noreferrer"
               className="project-card__icon-btn"
-              aria-label="Ver repositorio"
+              aria-label={t.projects.viewRepo}
             >
               <GitHub size={16} />
             </a>
@@ -42,13 +45,13 @@ export function CardsProyecto({ image, title, stack = [], onVerMas, linkRepo, li
               target="_blank"
               rel="noopener noreferrer"
               className="project-card__icon-btn"
-              aria-label="Ver proyecto"
+              aria-label={t.projects.viewProject}
             >
               <Eye size={16} />
             </a>
           )}
           <button className="project-card__btn" onClick={onVerMas}>
-            Ver más
+            {t.projects.viewMore}
           </button>
         </div>
       </div>

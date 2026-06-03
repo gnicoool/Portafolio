@@ -1,9 +1,12 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Eye, GitHub } from 'react-feather';
+import { useLanguage } from '../../../context/LanguageContext.jsx';
 import './ModalProyecto.css';
 
 export function ModalProyecto({ project, onClose }) {
+  const { t } = useLanguage();
+
   useEffect(() => {
     const handler = (e) => e.key === 'Escape' && onClose();
     window.addEventListener('keydown', handler);
@@ -23,7 +26,7 @@ export function ModalProyecto({ project, onClose }) {
     <div className="pm-backdrop" onClick={onClose} role="dialog" aria-modal="true">
       <div className="pm-panel" onClick={(e) => e.stopPropagation()}>
 
-        <button className="pm-close" onClick={onClose} aria-label="Cerrar">
+        <button className="pm-close" onClick={onClose} aria-label={t.modal.close}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M18 6 6 18M6 6l12 12" strokeLinecap="round" />
           </svg>
@@ -41,12 +44,12 @@ export function ModalProyecto({ project, onClose }) {
             <h2 className="pm-title">{title}</h2>
             <div className="pm-links">
               {linkRepo && (
-                <a href={linkRepo} target="_blank" rel="noopener noreferrer" className="pm-icon-btn" aria-label="Ver repositorio">
+                <a href={linkRepo} target="_blank" rel="noopener noreferrer" className="pm-icon-btn" aria-label={t.modal.viewRepo}>
                   <GitHub size={18} />
                 </a>
               )}
               {linkDesplegado && (
-                <a href={linkDesplegado} target="_blank" rel="noopener noreferrer" className="pm-icon-btn" aria-label="Ver proyecto desplegado">
+                <a href={linkDesplegado} target="_blank" rel="noopener noreferrer" className="pm-icon-btn" aria-label={t.modal.viewDeployed}>
                   <Eye size={18} />
                 </a>
               )}
@@ -61,15 +64,15 @@ export function ModalProyecto({ project, onClose }) {
 
           <div className="pm-sections">
             <section className="pm-section">
-              <h4 className="pm-section-label"><span className="pm-section-icon"></span> ¿Qué resuelve?</h4>
+              <h4 className="pm-section-label"><span className="pm-section-icon"></span> {t.modal.whatSolves}</h4>
               <p className="pm-section-text">{description}</p>
             </section>
             <section className="pm-section">
-              <h4 className="pm-section-label"><span className="pm-section-icon"></span> Decisión técnica</h4>
+              <h4 className="pm-section-label"><span className="pm-section-icon"></span> {t.modal.technicalDecision}</h4>
               <p className="pm-section-text">{technicalDecision}</p>
             </section>
             <section className="pm-section">
-              <h4 className="pm-section-label"><span className="pm-section-icon"></span> Aprendizaje</h4>
+              <h4 className="pm-section-label"><span className="pm-section-icon"></span> {t.modal.learning}</h4>
               <p className="pm-section-text">{learning}</p>
             </section>
           </div>

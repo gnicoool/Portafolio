@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About me",
+    "projects": "Projects",
+    "stack": "Stack",
+    "contact": "Contact",
+    "language": "Language",
+    "menu": "Menu"
+  },
+  "home": {
+    "eyebrow": "Web developer",
+    "title": "Portfolio",
+    "scrollLabel": "Go to About me",
+    "about": "About me",
+    "projects": "Projects",
+    "stack": "Stack",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About me",
+    "intro": "I'm {{name}}, currently in my third year of Computer Engineering at {{university}}.",
+    "bio": "FullStack developer and UI/UX designer passionate about building digital products with great user experience.",
+    "downloadCv": "Download CV"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project in mind? Reach out.",
+    "mail": "Email",
+    "downloadCv": "Download CV"
+  },
+  "projects": {
+    "eyebrow": "Work",
+    "title": "Projects",
+    "filterAll": "All",
+    "viewRepo": "View repository",
+    "viewProject": "View project",
+    "viewMore": "See more"
+  },
+  "modal": {
+    "close": "Close",
+    "viewRepo": "View repository",
+    "viewDeployed": "View deployed project",
+    "whatSolves": "What does it solve?",
+    "technicalDecision": "Technical decision",
+    "learning": "Learning"
+  },
+  "stack": {
+    "eyebrow": "Technologies",
+    "title": "Stack",
+    "filterAll": "All"
+  }
+}

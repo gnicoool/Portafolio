@@ -2,11 +2,13 @@ import { useMemo, useState } from 'react';
 import { PageLayout } from '../../components/PageLayout/PageLayout.jsx';
 import { GhostButton } from '../../components/Ghostbutton/Ghostbutton.jsx';
 import { CardStack } from '../../components/CardsStack/CardStack.jsx';
+import { useLanguage } from '../../context/LanguageContext.jsx';
 import { getStackCategories } from '../../utils/mapStack.js';
 import './Stack.css';
 
 export function Stack() {
-  const categories = useMemo(() => getStackCategories('es'), []);
+  const { lang, t } = useLanguage();
+  const categories = useMemo(() => getStackCategories(lang), [lang]);
   const [activeFilter, setActiveFilter] = useState('todos');
 
   const visible = activeFilter === 'todos'
@@ -17,15 +19,15 @@ export function Stack() {
     <PageLayout>
       <div className="stack-page">
         <header className="stack-page__header">
-          <p className="stack-page__eyebrow">Tecnologías</p>
-          <h1 className="stack-page__title">Stack</h1>
+          <p className="stack-page__eyebrow">{t.stack.eyebrow}</p>
+          <h1 className="stack-page__title">{t.stack.title}</h1>
 
           <div className="stack-page__filters">
             <GhostButton
               onClick={() => setActiveFilter('todos')}
               className={activeFilter === 'todos' ? 'ghost-btn--active' : ''}
             >
-              Todos
+              {t.stack.filterAll}
             </GhostButton>
             {categories.map((cat) => (
               <GhostButton

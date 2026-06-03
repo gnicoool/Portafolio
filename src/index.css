@@ -30,6 +30,15 @@
   --color-actions-divider: rgba(130, 145, 255, 0.12);
   --color-icon-btn-hover-bg: rgba(13, 37, 188, 0.38);
   --color-icon-btn-hover-border: rgba(76, 101, 245, 0.637);
+  --gradient-page: linear-gradient(135deg, #1a1f5e 0%, #2d3580 60%, #4a56b0 100%);
+  --color-navbar-btn-hover: rgba(46, 63, 192, 0.21);
+  --color-navbar-dropdown-bg: rgba(29, 21, 81, 0.96);
+  --color-navbar-item-hover: rgba(13, 5, 67, 0.85);
+  --color-navbar-link: rgba(200, 212, 255, 0.78);
+  --color-navbar-icon: var(--color-accent);
+  --color-navbar-icon-hover: rgba(184, 192, 255, 0.53);
+  --navbar-height: 58px;
+  --radius-dropdown: 14px;
 
   /* ── base tokens ──────────────────────────────────────────── */
   --text: #6b6375;
@@ -144,6 +153,41 @@ body {
     width: 36px;
     height: 36px;
   }
+}
+
+.navbar__icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-btn);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--color-btn-text);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.navbar__icon-btn:hover,
+.navbar__icon-btn--active {
+  background: var(--color-navbar-btn-hover);
+  border-color: var(--color-border);
+}
+
+.navbar__icon-btn:active {
+  transform: scale(0.92);
+}
+
+.portfolio-page-bg {
+  min-height: 100vh;
+  background: var(--gradient-page);
+}
+
+.portfolio-muted-text {
+  font-family: var(--font-body);
+  color: var(--color-stack-text);
 }
 
 #root {

@@ -1,0 +1,122 @@
+.navbar {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--navbar-height);
+  padding: 0 28px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.navbar__name {
+  font: 400 1.1rem/1.2 var(--font-display);
+  color: var(--color-title);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navbar__menu-wrapper {
+  position: relative;
+}
+
+.navbar__dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 180px;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-8px) scale(0.97);
+  transform-origin: top right;
+  background: var(--color-navbar-dropdown-bg);
+  border: 1px solid var(--color-tag-border);
+  border-radius: var(--radius-dropdown);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: opacity 0.22s ease, transform 0.22s cubic-bezier(0.22, 0.68, 0, 1.15);
+}
+
+.navbar__dropdown--open {
+  pointer-events: auto;
+  opacity: 1;
+  transform: none;
+}
+
+.navbar__dropdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+}
+
+.navbar__dropdown-list li {
+  opacity: 0;
+  transform: translateX(6px);
+}
+
+.navbar__dropdown--open li {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.2s ease calc(var(--i) * 45ms),
+    transform 0.2s ease calc(var(--i) * 45ms);
+}
+
+.navbar__dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 14px;
+  border-radius: var(--radius-btn);
+  font: inherit;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+  color: var(--color-navbar-link);
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.navbar__dropdown-item:hover {
+  background: var(--color-navbar-item-hover);
+  color: var(--color-title);
+}
+
+.navbar__dropdown-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-navbar-icon);
+  transition: color 0.18s ease;
+}
+
+.navbar__dropdown-item:hover .navbar__dropdown-icon {
+  color: var(--color-navbar-icon-hover);
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .navbar__name {
+    font-size: 0.95rem;
+  }
+
+  .navbar__dropdown {
+    right: -4px;
+    min-width: 168px;
+  }
+}

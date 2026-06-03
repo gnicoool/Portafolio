@@ -3,7 +3,7 @@
   padding: 48px 32px 56px;
   box-sizing: border-box;
   text-align: left;
-  background: linear-gradient(135deg, #1a1f5e 0%, #2d3580 60%, #4a56b0 100%);
+  background: var(--gradient-page);
   border-top: 1px solid var(--border);
 }
 

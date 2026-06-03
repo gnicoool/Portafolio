@@ -11,9 +11,8 @@ export function Stack() {
   const categories = useMemo(() => getStackCategories(lang), [lang]);
   const [activeFilter, setActiveFilter] = useState('todos');
 
-  const visible = activeFilter === 'todos'
-    ? categories
-    : categories.filter((cat) => cat.id === activeFilter);
+  const visible =
+    activeFilter === 'todos' ? categories : categories.filter((cat) => cat.id === activeFilter);
 
   return (
     <PageLayout>

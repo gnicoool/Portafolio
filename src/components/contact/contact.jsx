@@ -38,11 +38,7 @@ export function Contact() {
   const links = LINK_DEFS.map((def) => ({
     ...def,
     label:
-      def.id === 'mail'
-        ? t.contact.mail
-        : def.id === 'cv'
-          ? t.contact.downloadCv
-          : def.labelKey,
+      def.id === 'mail' ? t.contact.mail : def.id === 'cv' ? t.contact.downloadCv : def.labelKey,
   }));
 
   return (

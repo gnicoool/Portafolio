@@ -14,8 +14,11 @@
   box-shadow: 0 4px 24px rgba(0, 0, 20, 0.4);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  transition: transform 0.25s cubic-bezier(0.22, 0.68, 0, 1.2), border-color 0.25s ease,
-    background 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s cubic-bezier(0.22, 0.68, 0, 1.2),
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .stack-card:hover {

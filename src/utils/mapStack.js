@@ -19,11 +19,9 @@ const CATEGORY_LABELS = {
 };
 
 function resolveStackLogo(jsonPath, id) {
-  const candidates = [
-    jsonPath?.split('/').pop(),
-    LOGO_ALIASES[id],
-    id ? `${id}.svg` : null,
-  ].filter(Boolean);
+  const candidates = [jsonPath?.split('/').pop(), LOGO_ALIASES[id], id ? `${id}.svg` : null].filter(
+    Boolean
+  );
 
   for (const filename of candidates) {
     const match = Object.entries(stackLogos).find(([path]) => path.endsWith(`/${filename}`));

@@ -20,9 +20,8 @@ export function Proyectos() {
     label: id === 'todos' ? t.projects.filterAll : id,
   }));
 
-  const visible = activeFilter === 'todos'
-    ? projects
-    : projects.filter((p) => p.tipo === activeFilter);
+  const visible =
+    activeFilter === 'todos' ? projects : projects.filter((p) => p.tipo === activeFilter);
 
   const selected = selectedId != null ? (projects.find((p) => p.id === selectedId) ?? null) : null;
 

@@ -27,7 +27,16 @@
     "imagen": "/assets/proyects/super.png",
     "linkRepo": "https://github.com/gnicoool/Proyecto2_BD/tree/proyecto-3",
     "linkDesplegado": "https://supermercado-web-60of.onrender.com/login",
-    "stackUsado": ["react", "tailwind", "fastapi", "postgresql", "typescript", "html", "css", "docker"],
+    "stackUsado": [
+      "react",
+      "tailwind",
+      "fastapi",
+      "postgresql",
+      "typescript",
+      "html",
+      "css",
+      "docker"
+    ],
     "queResuelve": {
       "es": "Sistema de gestión comercial integral que digitaliza y automatiza el control de inventarios, roles de usuarios (administrador/vendedor), proveedores y transacciones en tiempo real.",
       "en": "An all-in-one commercial management system that digitalizes and automates inventory control, role-based access (admin/seller), suppliers, and real-time transactions."

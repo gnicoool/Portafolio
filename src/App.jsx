@@ -4,7 +4,6 @@ import { Home } from './pages/Home/Home.jsx';
 import { Proyectos } from './pages/Proyectos/Proyectos.jsx';
 import { Stack } from './pages/Stack/Stack.jsx';
 
-
 function App() {
   return (
     <LanguageProvider>

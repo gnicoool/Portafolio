@@ -14,7 +14,10 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-btn);
   cursor: pointer;
-  transition: color 0.22s ease, border-color 0.22s ease, transform 0.18s ease;
+  transition:
+    color 0.22s ease,
+    border-color 0.22s ease,
+    transform 0.18s ease;
 }
 
 .ghost-btn__bg {

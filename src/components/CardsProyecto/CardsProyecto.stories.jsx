@@ -98,6 +98,10 @@ export const CardNoImage = () => (
       padding: '40px',
     }}
   >
-    <CardsProyecto title="Proyecto sin imagen" stack={['Vue', 'Firebase', 'TailwindCSS']} onVerMas={() => {}} />
+    <CardsProyecto
+      title="Proyecto sin imagen"
+      stack={['Vue', 'Firebase', 'TailwindCSS']}
+      onVerMas={() => {}}
+    />
   </div>
 );

@@ -45,8 +45,8 @@ export const OverContent = () => (
           className="portfolio-muted-text"
           style={{ marginTop: '16px', lineHeight: 1.7, opacity: 0.65 }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua.
         </p>
       ))}
     </main>

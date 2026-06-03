@@ -15,17 +15,27 @@ export function ModalProyecto({ project, onClose }) {
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
-    return () => { document.body.style.overflow = ''; };
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, []);
 
   if (!project) return null;
 
-  const { image, title, stack = [], description, technicalDecision, learning, linkRepo, linkDesplegado } = project;
+  const {
+    image,
+    title,
+    stack = [],
+    description,
+    technicalDecision,
+    learning,
+    linkRepo,
+    linkDesplegado,
+  } = project;
 
   return createPortal(
     <div className="pm-backdrop" onClick={onClose} role="dialog" aria-modal="true">
       <div className="pm-panel" onClick={(e) => e.stopPropagation()}>
-
         <button className="pm-close" onClick={onClose} aria-label={t.modal.close}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M18 6 6 18M6 6l12 12" strokeLinecap="round" />
@@ -33,9 +43,11 @@ export function ModalProyecto({ project, onClose }) {
         </button>
 
         <div className="pm-image-wrapper">
-          {image
-            ? <img src={image} alt={title} className="pm-image" />
-            : <div className="pm-image-placeholder" />}
+          {image ? (
+            <img src={image} alt={title} className="pm-image" />
+          ) : (
+            <div className="pm-image-placeholder" />
+          )}
           <div className="pm-image-overlay" />
         </div>
 
@@ -44,12 +56,24 @@ export function ModalProyecto({ project, onClose }) {
             <h2 className="pm-title">{title}</h2>
             <div className="pm-links">
               {linkRepo && (
-                <a href={linkRepo} target="_blank" rel="noopener noreferrer" className="pm-icon-btn" aria-label={t.modal.viewRepo}>
+                <a
+                  href={linkRepo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pm-icon-btn"
+                  aria-label={t.modal.viewRepo}
+                >
                   <GitHub size={18} />
                 </a>
               )}
               {linkDesplegado && (
-                <a href={linkDesplegado} target="_blank" rel="noopener noreferrer" className="pm-icon-btn" aria-label={t.modal.viewDeployed}>
+                <a
+                  href={linkDesplegado}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pm-icon-btn"
+                  aria-label={t.modal.viewDeployed}
+                >
                   <Eye size={18} />
                 </a>
               )}
@@ -58,21 +82,29 @@ export function ModalProyecto({ project, onClose }) {
 
           <div className="pm-stack">
             {stack.map((tech) => (
-              <span key={tech} className="pm-tag">{tech}</span>
+              <span key={tech} className="pm-tag">
+                {tech}
+              </span>
             ))}
           </div>
 
           <div className="pm-sections">
             <section className="pm-section">
-              <h4 className="pm-section-label"><span className="pm-section-icon"></span> {t.modal.whatSolves}</h4>
+              <h4 className="pm-section-label">
+                <span className="pm-section-icon"></span> {t.modal.whatSolves}
+              </h4>
               <p className="pm-section-text">{description}</p>
             </section>
             <section className="pm-section">
-              <h4 className="pm-section-label"><span className="pm-section-icon"></span> {t.modal.technicalDecision}</h4>
+              <h4 className="pm-section-label">
+                <span className="pm-section-icon"></span> {t.modal.technicalDecision}
+              </h4>
               <p className="pm-section-text">{technicalDecision}</p>
             </section>
             <section className="pm-section">
-              <h4 className="pm-section-label"><span className="pm-section-icon"></span> {t.modal.learning}</h4>
+              <h4 className="pm-section-label">
+                <span className="pm-section-icon"></span> {t.modal.learning}
+              </h4>
               <p className="pm-section-text">{learning}</p>
             </section>
           </div>

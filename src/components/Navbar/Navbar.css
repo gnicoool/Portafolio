@@ -60,7 +60,9 @@
   border-radius: var(--radius-dropdown);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  transition: opacity 0.22s ease, transform 0.22s cubic-bezier(0.22, 0.68, 0, 1.15);
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s cubic-bezier(0.22, 0.68, 0, 1.15);
 }
 
 .navbar__dropdown--open {
@@ -102,7 +104,9 @@
   letter-spacing: 0.02em;
   color: var(--color-navbar-link);
   text-decoration: none;
-  transition: background 0.18s ease, color 0.18s ease;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
 }
 
 .navbar__dropdown-item:hover {
@@ -136,7 +140,9 @@
   margin-left: auto;
   color: var(--color-navbar-icon);
   flex-shrink: 0;
-  transition: transform 0.2s ease, color 0.18s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.18s ease;
 }
 
 .navbar__lang-chevron--open {
@@ -150,7 +156,9 @@
   overflow: hidden;
   max-height: 0;
   opacity: 0;
-  transition: max-height 0.22s ease, opacity 0.18s ease;
+  transition:
+    max-height 0.22s ease,
+    opacity 0.18s ease;
 }
 
 .navbar__lang-submenu--open {
@@ -173,7 +181,9 @@
   cursor: pointer;
   width: 100%;
   text-align: left;
-  transition: background 0.18s ease, color 0.18s ease;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
 }
 
 .navbar__lang-option:hover {

@@ -1,6 +1,7 @@
 import './Ghostbutton.css';
 
-export function GhostButton({ children, href, onClick, target, rel, className = '' }) {  const classNames = `ghost-btn ${className}`.trim();
+export function GhostButton({ children, href, onClick, target, rel, className = '' }) {
+  const classNames = `ghost-btn ${className}`.trim();
 
   const Tag = href ? 'a' : 'button';
   return (

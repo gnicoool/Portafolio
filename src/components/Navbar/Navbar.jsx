@@ -1,5 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
-import { ChevronDown, GitHub, Globe, Home, Layers, Menu, Phone, Terminal, User, X } from 'react-feather';
+import {
+  ChevronDown,
+  GitHub,
+  Globe,
+  Home,
+  Layers,
+  Menu,
+  Phone,
+  Terminal,
+  User,
+  X,
+} from 'react-feather';
 import { useLanguage } from '../../context/LanguageContext.jsx';
 import './Navbar.css';
 
@@ -116,7 +127,9 @@ export function Navbar({ name = 'Jackelyn Girón', githubUrl = 'https://github.c
                         />
                       </button>
 
-                      <div className={`navbar__lang-submenu${langOpen ? ' navbar__lang-submenu--open' : ''}`}>
+                      <div
+                        className={`navbar__lang-submenu${langOpen ? ' navbar__lang-submenu--open' : ''}`}
+                      >
                         {LANG_OPTIONS.map(({ code, label }) => (
                           <button
                             key={code}

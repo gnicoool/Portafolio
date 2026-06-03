@@ -6,7 +6,7 @@
   --color-bg-card-hover: rgba(38, 44, 100, 0.72);
   --color-border: rgba(120, 130, 220, 0.22);
   --color-border-hover: rgba(140, 155, 255, 0.45);
-  --color-title: #e8eaff;
+  --color-title: #ffffff;
   --color-tag-bg: rgba(45, 53, 118, 0.655);
   --color-tag-text: #b8c0ff;
   --color-tag-border: rgba(130, 145, 255, 0.3);
@@ -39,6 +39,14 @@
   --color-navbar-icon-hover: rgba(184, 192, 255, 0.53);
   --navbar-height: 58px;
   --radius-dropdown: 14px;
+  --color-section-muted: rgba(210, 218, 255, 0.6);
+  --color-section-subtle: rgba(180, 190, 255, 0.55);
+  --color-link-card-bg: rgba(30, 34, 80, 0.45);
+  --color-link-card-hover: rgba(50, 62, 160, 0.48);
+  --color-link-icon-bg: rgba(70, 85, 190, 0.3);
+  --color-link-icon-hover: rgba(90, 108, 220, 0.45);
+  --max-width-content: 1000px;
+  --max-width-narrow: 700px;
 
   /* ── base tokens ──────────────────────────────────────────── */
   --text: #6b6375;
@@ -188,6 +196,72 @@ body {
 .portfolio-muted-text {
   font-family: var(--font-body);
   color: var(--color-stack-text);
+}
+
+.portfolio-section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 40px;
+  box-sizing: border-box;
+}
+
+.portfolio-section__title {
+  font: 400 clamp(2.4rem, 5vw, 3.6rem) / 1.1 var(--font-display);
+  color: var(--color-title);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.portfolio-section__subtitle {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-section-muted);
+  margin: 0;
+}
+
+.portfolio-section__text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--color-modal-text);
+  margin: 0;
+}
+
+.portfolio-outline-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: white;
+  text-decoration: none;
+  background: #0d055c;
+  border-radius: 12px;
+}
+
+.portfolio-outline-btn:hover {
+  background: var(--color-bg-card-hover);
+  color: var(--color-title);
+  transform: translateY(-2px);
+}
+
+.portfolio-outline-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding: 60px 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolio-section {
+    padding: 48px 16px;
+  }
 }
 
 #root {
